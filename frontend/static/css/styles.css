@@ -3,21 +3,78 @@
     margin: 0 auto;
     padding: 20px;
     font-size: 30px;
-    background-color: #f5f5f5;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-
+    background-color: rgba(37, 37, 37, 0.5);
+    box-shadow: 0 0 5px rgba(58, 255, 0, 0.9);
+    font-family: "Courier New", monospace;
 }
 
 header, main, footer {
     margin-bottom: 20px;
 }
 
-.output{
-    font-family: "Courier 10 Pitch";
-    background-color: #e8e8e8;
+.output {
+    margin-top: 50px;
+    margin-bottom: 4px;
+    font-family: "Courier New", serif;
+    background-color: #262626;
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
     border-radius: 4px;
     padding: 10px;
 }
 
+.typing {
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing 2s steps(40, end);
+}
 
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100%; border-right: none; }
+}
+body {
+    background-color: #001119;
+    font-family: 'Courier New', monospace;
+    color: #7FFF00;
+    padding: 20px;
+}
+
+#inputMessage {
+    background-color: #001119;
+    border: none;
+    border-bottom: 2px solid #7FFF00;
+    color: #7FFF00;
+    padding: 10px;
+    font-size: 16px;
+    width: 75%;
+    margin-bottom: 10px;
+}
+
+#inputMessage::placeholder {
+    color: #5F9EA0;
+}
+
+button {
+    background-color: #7FFF00;
+    border: none;
+    color: #001119;
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 10px 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #3D9140;
+    color: #FFFFFF;
+}
+
+.output {
+    margin-top: 20px;
+    padding: 15px;
+    border: 2px solid #7FFF00;
+    min-height: 300px;
+    overflow: auto;
+}

@@ -25,8 +25,10 @@
     const messagesElement = document.getElementById("messages");
     const messageElement = document.createElement("div");
     messageElement.textContent = message;
+    messageElement.className = "typing";
     messagesElement.appendChild(messageElement);
 }
     function stopWebSocket() {
         socket.close();
     }
+
