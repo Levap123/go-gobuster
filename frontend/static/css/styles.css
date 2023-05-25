@@ -1,0 +1,23 @@
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+    font-size: 30px;
+    background-color: #f5f5f5;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+
+}
+
+header, main, footer {
+    margin-bottom: 20px;
+}
+
+.output{
+    font-family: "Courier 10 Pitch";
+    background-color: #e8e8e8;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    padding: 10px;
+}
+
+
