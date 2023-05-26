@@ -15,11 +15,14 @@
 });
 
     function sendMessage() {
-    const inputElement = document.getElementById("inputMessage");
-    const message = inputElement.value;
-    socket.send(JSON.stringify({ url: message }));
-    inputElement.value = "";
-}
+        const inputElement = document.getElementById("inputMessage");
+        let message = inputElement.value;
+
+        message = sanitizeURL(message);
+
+        socket.send(JSON.stringify({ url: message }));
+        inputElement.value = "";
+    }
 
     function addMessageToDOM(message) {
     const messagesElement = document.getElementById("messages");
@@ -31,4 +34,16 @@
     function stopWebSocket() {
         socket.close();
     }
+    //сheck input
+    function sanitizeURL(inputURL) {
 
+        if (!inputURL.startsWith('http://') && !inputURL.startsWith('https://')) {
+            inputURL = 'http://' + inputURL;
+        }
+
+        if (inputURL.endsWith('/')) {
+            inputURL = inputURL.slice(0, -1);
+        }
+
+        return inputURL;
+    }
