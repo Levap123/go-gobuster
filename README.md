@@ -18,6 +18,7 @@ Website enumeration involves the process of uncovering the various resources uti
 
 
 For example, if you enter the ```WebsiteAddress.com```, you will get list of directory names which responses all codes except ```404, 302, 429```
+
 ![image](https://github.com/Levap123/go-gobuster/assets/96424772/e21a727c-c3d4-459e-b9af-d0c0f73e66e1)
 
 
